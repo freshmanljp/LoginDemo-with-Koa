@@ -1,0 +1,53 @@
+{
+  "name": "koa_framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon --exec babel-node src/index.js",
+    "build": "cross-env NODE_ENV=prod webpack --config config/webpack.config.prod.js",
+    "watch": "cross-env NODE_ENV=dev webpack --watch --progress",
+    "debug": "nodemon --inspect ./dist/server.bundle.js",
+    "clean": "rimraf dist",
+    "dev": "npm-run-all -p watch debug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "bcrypt": "^5.0.1",
+    "bluebird": "^3.7.2",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-combine-routers": "^4.0.2",
+    "koa-compose": "^4.1.0",
+    "koa-compress": "^5.0.1",
+    "koa-helmet": "^6.0.0",
+    "koa-json": "^2.0.2",
+    "koa-jwt": "^4.0.0",
+    "koa-router": "^9.4.0",
+    "koa-static": "^5.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.18",
+    "nodemailer": "^6.4.17",
+    "redis": "^3.0.2",
+    "rimraf": "^3.0.2",
+    "svg-captcha": "^1.4.0",
+    "terser-webpack-plugin": "^5.1.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
